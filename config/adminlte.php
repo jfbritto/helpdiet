@@ -253,7 +253,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -293,7 +293,7 @@ return [
 
         [
             'text'        => 'Pacientes',
-            'url'         => '#',
+            'url'         => 'patients',
             'icon'        => 'fa fa-users mr-2',
             'icon_color'  => 'warning',
         ],
@@ -351,7 +351,7 @@ return [
         //     'label'       => 4,
         //     'label_color' => 'success',
         // ],
-        
+
         // [
         //     'text' => 'change_password',
         //     'url'  => 'admin/settings',
@@ -494,7 +494,7 @@ return [
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
