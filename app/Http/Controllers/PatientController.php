@@ -52,7 +52,7 @@ class PatientController extends Controller
             return back();
         }
 
-        $data = $request->only('name', 'email');
+        $data = $request->all();
         $patient->update($data);
 
         return view('patients.show', compact('patient'));
