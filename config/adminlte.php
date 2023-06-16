@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => 'Sistema de gestão para nutricionistas',
+    'title_prefix' => 'HelpDiet | ',
     'title_postfix' => '',
 
     /*
@@ -86,7 +86,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'favicons/favicon.ico',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -107,13 +107,13 @@ return [
     */
 
     'preloader' => [
-        'enabled' => false,
+        'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'favicons/favicon.ico',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
-            'width' => 60,
-            'height' => 60,
+            'width' => 100,
+            'height' => 100,
         ],
     ],
 
@@ -192,7 +192,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-secondary elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -297,30 +297,30 @@ return [
             'icon'        => 'fa fa-users mr-2',
             'icon_color'  => 'warning',
         ],
-        [
-            'text'        => 'Agendamentos',
-            'url'         => '#',
-            'icon'        => 'fa fa-calendar mr-2',
-            'icon_color'  => 'warning',
-        ],
-        [
-            'text'        => 'Pré-consulta',
-            'url'         => '#',
-            'icon'        => 'fa fa-edit mr-2',
-            'icon_color'  => 'warning',
-        ],
-        [
-            'text'        => 'Financeiro',
-            'url'         => '#',
-            'icon'        => 'fa fa-money-bill mr-2',
-            'icon_color'  => 'warning',
-        ],
-        [
-            'text'        => 'Lâminas',
-            'url'         => '#',
-            'icon'        => 'fa fa-file mr-2',
-            'icon_color'  => 'warning',
-        ],
+        // [
+        //     'text'        => 'Agendamentos',
+        //     'url'         => '#',
+        //     'icon'        => 'fa fa-calendar mr-2',
+        //     'icon_color'  => 'warning',
+        // ],
+        // [
+        //     'text'        => 'Pré-consulta',
+        //     'url'         => '#',
+        //     'icon'        => 'fa fa-edit mr-2',
+        //     'icon_color'  => 'warning',
+        // ],
+        // [
+        //     'text'        => 'Financeiro',
+        //     'url'         => '#',
+        //     'icon'        => 'fa fa-money-bill mr-2',
+        //     'icon_color'  => 'warning',
+        // ],
+        // [
+        //     'text'        => 'Lâminas',
+        //     'url'         => '#',
+        //     'icon'        => 'fa fa-file mr-2',
+        //     'icon_color'  => 'warning',
+        // ],
 
 
         // // Navbar items:

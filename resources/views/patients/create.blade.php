@@ -1,23 +1,23 @@
 @extends('adminlte::page')
 
-@section('title', 'HelpDiet')
+@section('title', 'Novo Paciente')
 
 <head>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicons/favicon.ico') }}">
 </head>
 
 @section('content_header')
-    <div class="row">
-        <div class="col-sm-6">
-            <h1 class="m-0">Novo Paciente</h1>
-        </div>
-        <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="{{route('patients')}}">Pacientes</a></li>
-                <li class="breadcrumb-item active">Novo Paciente</li>
-            </ol>
-        </div>
+<div class="row">
+    <div class="col-sm-6">
+        <h1 class="m-0">Novo Paciente</h1>
     </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="{{route('patients')}}">Pacientes</a></li>
+            <li class="breadcrumb-item active">Novo Paciente</li>
+        </ol>
+    </div>
+</div>
 @stop
 
 @section('content')
@@ -31,7 +31,8 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="name">Nome</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome"
+                            required>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -54,13 +55,15 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="phone">Telefone</label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Digite seu telefone">
+                        <input type="text" class="form-control" id="phone" name="phone"
+                            placeholder="Digite seu telefone">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email"
+                            required>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -87,6 +90,7 @@
 
     function formatCPF() {
         let cpf = cpfInput.value.replace(/\D/g, '');
+        cpf = cpf.slice(0, 11); // Limita o campo a 11 dígitos
         cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
         cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
         cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
@@ -96,13 +100,13 @@
     cpfInput.addEventListener('blur', validateCPF);
 
     function validateCPF() {
-    const cpf = cpfInput.value.replace(/\D/g, '');
+        const cpf = cpfInput.value.replace(/\D/g, '');
 
-    if (cpf.length !== 11 || /^(.)\1+$/.test(cpf)) {
-        cpfInput.setCustomValidity('CPF inválido');
-    } else {
-        cpfInput.setCustomValidity('');
-    }
+        if (cpf.length !== 11 || /^(.)\1+$/.test(cpf)) {
+            cpfInput.setCustomValidity('CPF inválido');
+        } else {
+            cpfInput.setCustomValidity('');
+        }
     }
 </script>
 @stop

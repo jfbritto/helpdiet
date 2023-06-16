@@ -1,24 +1,24 @@
 @extends('adminlte::page')
 
-@section('title', 'HelpDiet')
+@section('title', "Editando Paciente $patient->name")
 
 <head>
     <link rel="icon" type="image/x-icon" href="{{ asset('favicons/favicon.ico') }}">
 </head>
 
 @section('content_header')
-    <div class="row">
-        <div class="col-sm-6">
-            <h1 class="m-0">Editando Paciente</h1>
-        </div>
-        <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="{{route('patients')}}">Pacientes</a></li>
-                <li class="breadcrumb-item"><a href="{{route('patients.show', $patient->id)}}">{{$patient->name}}</a></li>
-                <li class="breadcrumb-item active">Editando Paciente</li>
-            </ol>
-        </div>
+<div class="row">
+    <div class="col-sm-6">
+        <h1 class="m-0">Editando Paciente</h1>
     </div>
+    <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="{{route('patients')}}">Pacientes</a></li>
+            <li class="breadcrumb-item"><a href="{{route('patients.show', $patient->id)}}">{{$patient->name}}</a></li>
+            <li class="breadcrumb-item active">Editando Paciente</li>
+        </ol>
+    </div>
+</div>
 @stop
 
 @section('content')
@@ -31,7 +31,8 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="name">Nome</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" value="{{$patient->name}}">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome"
+                            value="{{$patient->name}}">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -54,19 +55,22 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="phone">Telefone</label>
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Digite seu telefone" value="{{$patient->phone}}">
+                        <input type="text" class="form-control" id="phone" name="phone"
+                            placeholder="Digite seu telefone" value="{{$patient->phone}}">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email" value="{{$patient->email}}">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu email"
+                            value="{{$patient->email}}">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="cpf">CPF</label>
-                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF" value="{{$patient->cpf}}">
+                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF"
+                            value="{{$patient->cpf}}">
                     </div>
                 </div>
                 <div class="col-md-12">
