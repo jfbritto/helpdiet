@@ -29,7 +29,7 @@
 
     </div>
 
-    <div class="col-lg-3 col-6">
+    <div class="col-lg-4 col-6">
 
         {{-- <div class="small-box bg-success">
             <div class="inner">

@@ -5,7 +5,7 @@
 Clone o Repositório
 
 ```sh
-git clone https://github.com/jfbritto/superscraping.git
+git clone https://github.com/jfbritto/helpdiet.git
 ```
 
 Suba os containers
@@ -17,13 +17,13 @@ docker-compose up -d
 Dê permissão
 
 ```sh
-sudo chmod 777 -R superscraping/
+sudo chmod 777 -R helpdiet/
 ```
 
 Entre no diretório
 
 ```sh
-cd superscraping/
+cd helpdiet/
 ```
 
 Acesse o container
